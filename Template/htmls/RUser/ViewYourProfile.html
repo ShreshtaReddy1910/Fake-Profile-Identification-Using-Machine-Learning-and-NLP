@@ -1,0 +1,85 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#f01111;}
+			.container-fluid {padding:50px;}
+			.container{background-color:rgb(170, 132, 132);padding:50px;   }
+			#title{font-family: 'Comic Sans MS', cursive;
+}
+			.text-uppercase{
+			font-family: 'Comic Sans MS', cursive;
+
+			}
+		.style1 {
+	color: #f5f1f1;
+	font-weight: bold;
+	
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">YOUR PROFILE DETAILS !!! </p>
+                            <hr>
+ 							<div class="form-group">
+                                <P><span class="style1">USER NAME</span> is {{object.username}}</P>
+                            </div>
+
+							<div class="form-group">
+                                <P><span class="style1">EMAIL</span> is {{object.email}}</P>
+                            </div>
+
+							<div class="form-group">
+                                <P><span class="style1">PASSWORD</span> is {{object.password}}</P>
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">MOBILE NO</span> is {{object.phoneno}}</p>
+
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">COUNTRY</span> is {{object.country}}</p>
+
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">STATE</span> is {{object.state}}</p>
+
+							</div>
+
+							<div class="form-group">
+                                <p><span class="style1">CITY</span> is {{object.city}}</p>
+
+							</div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
